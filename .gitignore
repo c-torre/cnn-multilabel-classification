@@ -1,0 +1,10 @@
+*.jpg
+*.pdf
+*.tar.gz
+*.pyc
+*.aux
+*.log
+*.out
+
+.vscode
+others
