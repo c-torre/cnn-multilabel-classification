@@ -27,6 +27,7 @@ import datasets
 import model
 import multilabel
 import paths
+import pkl
 import utils
 
 dataset = datasets.dataset
@@ -85,6 +86,7 @@ def imshow(img):
 
 
 imshow(torchvision.utils.make_grid(tensor))
+
 
 
 # Loss function, optimizer, and thresholding
@@ -171,6 +173,10 @@ for epoch in range(epochmax):
 
 print("Finished training")
 
+
+use_pkl = True  # Load pickle instead for plots
+if use_pkl:
+    model.load_state_dict(torch.load("pkl/brain_v2.pkl"))
 
 # Plot loss
 plt.subplots()

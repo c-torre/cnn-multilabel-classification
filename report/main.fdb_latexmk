@@ -1,14 +1,14 @@
 # Fdb version 3
-["pdflatex"] 1590956939 "/home/c/hy/courses/data-20001-deep-learning/assignments/project/report/main.tex" "/home/c/hy/courses/data-20001-deep-learning/assignments/project/report/main.pdf" "main" 1590956939
+["pdflatex"] 1590957035 "/home/c/hy/courses/data-20001-deep-learning/assignments/project/report/main.tex" "/home/c/hy/courses/data-20001-deep-learning/assignments/project/report/main.pdf" "main" 1590957035
   "/home/c/hy/courses/data-20001-deep-learning/assignments/project/report/graphics/bad-groundtruth-bad-predictions.jpg" 1590868807 23758 ddae912a8c0c7cea4133c57c1a05d7a5 ""
   "/home/c/hy/courses/data-20001-deep-learning/assignments/project/report/graphics/empty-labels.jpg" 1590873917 14627 cbe930d3912c9cc9226cf12a29184bb7 ""
   "/home/c/hy/courses/data-20001-deep-learning/assignments/project/report/graphics/everything-female.jpg" 1590873233 17754 fc4d5a4364a2d31e2b7a7c71be4cb60c ""
   "/home/c/hy/courses/data-20001-deep-learning/assignments/project/report/graphics/final-accuracy.jpg" 1590956926 37576 941668caad6b8bfef3b918bed3ccc03c ""
   "/home/c/hy/courses/data-20001-deep-learning/assignments/project/report/graphics/final-loss.jpg" 1590956908 31144 ea4fdf0f3eec448e6562fe00fd490785 ""
   "/home/c/hy/courses/data-20001-deep-learning/assignments/project/report/graphics/first-good.jpg" 1590956938 36271 e1cffbe53014360f2d30204fff0fd3e8 ""
-  "/home/c/hy/courses/data-20001-deep-learning/assignments/project/report/main.aux" 1590956939 3534 775ee83f01e8b554bc7e37994526fe3f "pdflatex"
-  "/home/c/hy/courses/data-20001-deep-learning/assignments/project/report/main.out" 1590956939 798 156324ac9587d468e452910616b3b11a "pdflatex"
-  "/home/c/hy/courses/data-20001-deep-learning/assignments/project/report/main.tex" 1590956348 15871 b2adec982486d3f9ed968a2db8450e73 ""
+  "/home/c/hy/courses/data-20001-deep-learning/assignments/project/report/main.aux" 1590957035 3422 77829ada9374e02b8e15bcdf0f1b5e48 "pdflatex"
+  "/home/c/hy/courses/data-20001-deep-learning/assignments/project/report/main.out" 1590957035 798 156324ac9587d468e452910616b3b11a "pdflatex"
+  "/home/c/hy/courses/data-20001-deep-learning/assignments/project/report/main.tex" 1590957034 15745 7dfce1e7bd030cd786f7104b506a1f80 ""
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1572595918 3332 103109f5612ad95229751940c61aada0 ""
   "/usr/share/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm" 1572595918 1324 c910af8c371558dc20f2d7822f66fe64 ""
   "/usr/share/texmf-dist/fonts/tfm/public/cm/cmmi12.tfm" 1572595918 1524 4414a8315f39513458b80dfc63bff03a ""
@@ -58,7 +58,7 @@
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1589038548 4569290 153d2219213bf38af92e4be49d092a67 ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1589038545 8044938 af65f2507ab358d0ab334b7662d3a33d ""
   (generated)
-  "/home/c/hy/courses/data-20001-deep-learning/assignments/project/report/main.aux"
-  "/home/c/hy/courses/data-20001-deep-learning/assignments/project/report/main.log"
   "/home/c/hy/courses/data-20001-deep-learning/assignments/project/report/main.pdf"
+  "/home/c/hy/courses/data-20001-deep-learning/assignments/project/report/main.aux"
   "/home/c/hy/courses/data-20001-deep-learning/assignments/project/report/main.out"
+  "/home/c/hy/courses/data-20001-deep-learning/assignments/project/report/main.log"

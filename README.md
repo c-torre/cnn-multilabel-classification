@@ -14,9 +14,10 @@ Labels in the required (long/tidy) format in the data directory as CSV.
 
 Directories:
 
-* data: directory architecture for
+* data: directory architecture for data, and labels in CSV.
 * old: PeopleNet older trial and an earlier version of the final model.
-* pkl: pickle files for trained networks
+* pkl: pickle files for trained networks. "brain_v2" was used to generate current results.
+* report: project report source and compiled versions.
 
 Files:
 
