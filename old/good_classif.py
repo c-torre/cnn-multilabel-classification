@@ -1,4 +1,3 @@
-
 import os
 import random
 import sys
@@ -48,4 +47,5 @@ class Net(nn.Module):
         x = x.view(-1, self.predensen * self.fres * self.fres)
         x = self.dense(x)
         # x = self.dense2(x)
+        # !! Test without sigmoid !!
         return x

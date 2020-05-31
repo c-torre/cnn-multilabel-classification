@@ -15,7 +15,7 @@ Labels in the required (long/tidy) format in the data directory as CSV.
 Directories:
 
 * data: directory architecture for
-* old: PeopleNet older trial.
+* old: PeopleNet older trial and an earlier version of the final model.
 * pkl: pickle files for trained networks
 
 Files:
@@ -26,4 +26,5 @@ Files:
 * multilabel.py: preprocessing of labels data structure.
 * paths.py: manage all file paths in the project.
 * README.md: you are here.
+* results.txt: predictions over the test set.
 * utils.py: auxiliary methods for main.py.
