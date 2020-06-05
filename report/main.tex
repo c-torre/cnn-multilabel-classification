@@ -208,10 +208,26 @@ Data augmentation was also in place.
 Other trials included reducing the number of neurons and layers as the extremes of a few as possible, or as high as it allows to compute, testing as many variations of hyperparameters as possible.
 All kinds of activation functions were tested for the hidden layers.
 In many cases there was overfitting, the test and training split had to be adjusted, and data balancing revisited.
-In other instances, the network would never train.
+In other instances, the network would never learn.
 With very few layers, abstraction was impaired, while many neurons made it not reasonable to compute.
 Despite this, the performance had seemingly reached a maximum difficult to improve for the better versions of the network and accessory methods, although initial training loss was still high due to dataset issues.
 In many attempts, the network assigned correct labels while the ground truth labels were incorrect.
+
+Testing using accuracy is not correct especially in imbalanced data.
+For that, precision and recall are evaluated and taken into the F1 score metric.
+%The F1 value would punish a extreme value
+
+\begin{table}[ht]
+  \centering
+  \begin{tabular}{l r}
+	  {\small \textit{Metric}} & {\small \textit{Value}} \\ \hline
+	  Precision                & 0.73                    \\
+	  Recall                   & 0.69                    \\
+	  F1 Score                 & 0.71                    \\
+  \end{tabular}
+  \caption{Evaluation metrics of the model.}
+\end{table}
+
 
 \begin{figure}[ht]
   \centering
