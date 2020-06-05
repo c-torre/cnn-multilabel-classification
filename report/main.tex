@@ -195,11 +195,13 @@ In addition, the first more rational design of the network involved 4 hidden lay
 It was time to go simple again and start growing layers as long as accuracy and computation time.
 The starting point was a single hidden layer, and then another one was added, only for the apparent Eureka moment.
 With a two hidden layer CNNs, plus balanced input data showed impressive results: a total of 98\% of accuracy for all tested labels!
+Note that this is not the final correct metric for the model.
 It turns out that it was entirely due to sampling.
 Just by chance, all predicted labels just matched those in the sampled images for the test set.
 At the moment, it was plenty to think about: this could have happened at any point for false positives or false negatives.
 The apparent alternative was to perform cross-validation, but it would be a very expensive computation, especially for the number of trials I was launching.
 Cross-validation was then added and used more sparingly to increase the chances to catch these types of errors.
+Until now, the validation test has been obtained by spliting the training dataset.
 
 
 \section{Testing Alternatives and Final Models}
@@ -213,6 +215,7 @@ With very few layers, abstraction was impaired, while many neurons made it not r
 Despite this, the performance had seemingly reached a maximum difficult to improve for the better versions of the network and accessory methods, although initial training loss was still high due to dataset issues.
 In many attempts, the network assigned correct labels while the ground truth labels were incorrect.
 
+The model was trained with al available training data.
 Testing using accuracy is not correct especially in imbalanced data.
 For that, precision and recall are evaluated and taken into the F1 score metric.
 %The F1 value would punish a extreme value

@@ -1,9 +1,11 @@
-*.jpg
-*.tar.gz
-*.pyc
 *.aux
+*.fdb_latexmk
+*.fls
+*.jpg
 *.log
 *.out
+*.pyc
+*.tar.gz
 
 .vscode
 others

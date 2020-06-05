@@ -94,6 +94,8 @@ INPUT /home/c/hy/courses/data-20001-deep-learning/assignments/project/report/gra
 INPUT /home/c/hy/courses/data-20001-deep-learning/assignments/project/report/graphics/everything-female.jpg
 INPUT /home/c/hy/courses/data-20001-deep-learning/assignments/project/report/graphics/everything-female.jpg
 INPUT /home/c/hy/courses/data-20001-deep-learning/assignments/project/report/graphics/everything-female.jpg
+INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmr9.tfm
+INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmti9.tfm
 INPUT /home/c/hy/courses/data-20001-deep-learning/assignments/project/report/graphics/final-loss.jpg
 INPUT /home/c/hy/courses/data-20001-deep-learning/assignments/project/report/graphics/final-loss.jpg
 INPUT /home/c/hy/courses/data-20001-deep-learning/assignments/project/report/graphics/final-loss.jpg
@@ -108,4 +110,5 @@ INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb
+INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb
