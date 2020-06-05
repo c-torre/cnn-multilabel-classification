@@ -11,16 +11,11 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 import torch.optim as optim
-import torchvision
-from skimage import io, transform
 from torch.autograd import Variable
 from torch.optim import lr_scheduler
 from torch.utils.data import Dataset
 from torch.utils.data.dataset import Dataset
 from torch.utils.data.sampler import SubsetRandomSampler
-from torchvision import transforms
-from torchvision.datasets.utils import download_url
-from torchvision.utils import make_grid
 from tqdm import tqdm
 
 import datasets
@@ -28,7 +23,12 @@ import model
 import multilabel
 import paths
 import pkl
+import torchvision
 import utils
+from skimage import io, transform
+from torchvision import transforms
+from torchvision.datasets.utils import download_url
+from torchvision.utils import make_grid
 
 dataset = datasets.dataset
 test_dataset = datasets.test_dataset
@@ -49,7 +49,6 @@ indices = list(range(dataset_size))
 split = int(np.floor(validation_split * dataset_size))
 if shuffle_dataset:
     np.random.shuffle(indices)
-
 
 
 # Define the validation split and transform
@@ -86,7 +85,6 @@ def imshow(img):
 
 
 imshow(torchvision.utils.make_grid(tensor))
-
 
 
 # Loss function, optimizer, and thresholding
@@ -306,3 +304,35 @@ for i in range(len(output[0])):
 print(
     "Predicted: ", " ".join("%5s" % dataset.labels[index[j]] for j in range(len(index)))
 )
+
+
+# F-score, precision and recall
+TP = 0.0
+tFP = 0.0
+tTN = 0.0
+tFN = 0.0
+
+
+coincidences = utils.coincidences
+
+with torch.no_grad():
+    for i, data in enumerate(validation_loader, 0):
+        images, labels = data[0].cuda(), data[1].cuda()
+        outputs = model(images)
+        outputs = torch.sigmoid(outputs)
+        TP, FP, TN, FN = coincidences(outputs, labels)
+        tTP += TP
+        tTN += TN
+        tFP += FP
+        tFN += FN
+
+        # _ , predicted = torch.max(outputs.data,1)
+
+print("TP: %d, FP: %d, TN: %d, FN: %d" % (tTP, tFP, tTN, tFN))
+Precision = tTP / (tTP + tFP)
+Recall = tTP / (tTP + tFN)
+F1_Score = 2 * (Recall * Precision) / (Recall + Precision)
+
+print("Precision of the model: %.5f" % (Precision))
+print("Recall of the model: %.5f" % (Recall))
+print("F1Score of the model: %.5f" % (F1_Score))

@@ -12,16 +12,11 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 import torch.optim as optim
-import torchvision
-from skimage import io, transform
 from torch.autograd import Variable
 from torch.optim import lr_scheduler
 from torch.utils.data import Dataset
 from torch.utils.data.dataset import Dataset
 from torch.utils.data.sampler import SubsetRandomSampler
-from torchvision import transforms
-from torchvision.datasets.utils import download_url
-from torchvision.utils import make_grid
 from tqdm import tqdm
 
 
@@ -104,3 +99,28 @@ class Kfolder:
             return [training, validation]
         else:
             raise StopIteration
+
+# F-score, precision and recall
+def coincidences(array1, array2):
+    TP = 0.0
+    FP = 0.0
+    TN = 0.0
+    FN = 0.0
+    # treshold en los tensores
+    t = nn.Threshold(0.5, 0)
+    a1 = t(array1)
+
+    for i in range(len(a1)):
+        # print(a1[i])
+        # print(array2[i])
+        for j in range(len(a1[i])):
+            if a1[i][j] > 0 and array2[i][j] > 0:
+                TP += 1.0
+            elif a1[i][j] > 0 and array2[i][j] < 0.5:
+                FP += 1.0
+            elif a1[i][j] < 0.5 and array2[i][j] > 0:
+                FN += 1.0
+            else:
+                TN += 1.0
+        # print("TP: %d, FP: %d, TN: %d, FN: %d" % (TP,FP,TN,FN))
+    return TP, FP, TN, FN

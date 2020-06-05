@@ -2,7 +2,6 @@ import torch.nn as nn
 from torch.autograd import Variable
 from torch.optim import lr_scheduler
 from torch import optim
-from torchvision.utils import make_grid
 import time
 from torch.utils.data import Dataset
 
