@@ -1,6 +1,4 @@
-# 2020 Deep Learning Project
-
-Team: Unilayer Perceptron
+# 2020 CNN Multilabel Classification Assignment
 
 ## Instructions
 
